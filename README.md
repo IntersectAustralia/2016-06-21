@@ -32,7 +32,8 @@ template for creating websites for workshops.
 
 ## Creating a Repository
 
-1.  Go to [GitHub's importer][import]. 
+1.  Go to [GitHub's importer][importer]. 
+
 2.  Paste the url of this repo as the old repository to clone: https://github.com/swcarpentry/workshop-template
 
 3.  Select the owner for your new repository.
@@ -46,7 +47,7 @@ template for creating websites for workshops.
 
 6.  At this point, you should have a page like this:
 
-    ![](img/using-github-import.png?raw=true)
+    ![](fig/using-github-import.png?raw=true)
 
     You can now click "Begin Import".
     When the process is done,
@@ -72,7 +73,7 @@ please [get in touch](#getting-and-giving-help).
     You can do this in the browser by clicking on it in the file view on GitHub
     and then selecting the pencil icon in the menu bar:
 
-    ![](img/edit-index-file-menu-bar.png?raw=true)
+    ![](fig/edit-index-file-menu-bar.png?raw=true)
     
     Editing hints are embedded in `index.html`,
     and full instructions are in [CUSTOMIZATION.md](CUSTOMIZATION.md).
@@ -133,80 +134,29 @@ The following steps are only necessary if you want to run the website locally on
 
 ## Installing Software
 
-In order to preview the workshop website locally on your computer,
+If you want to set up Jekyll
+so that you can preview changes on your own machine before pushing them to GitHub,
 you must install the software described below.
+(Note: Julian Thilo has written instructions for
+[installing Jekyll on Windows][jekyll-windows].)
 
-> If you aren't able to install this software (or you just can't be
-> bothered), you can still create a website for your workshop.  Every
-> time you push a change to your website respository the live website
-> will update automatically, so you can check your changes on the live
-> site instead of locally.
+1.  **Ruby**.
+    This is included with Linux and Mac OS X;
+    the simplest option on Windows is to use [RubyInstaller][ruby-installer].
+    You can test your installation by running `ruby --version`.
+    For more information,
+    see [the Ruby installation guidelines][ruby-install-guide].
 
-1.  Ruby 2.0 or greater
+2.  **[RubyGems][rubygems]**
+    (the package manager for Ruby).
+    You can test your installation by running `gem --version`.
 
-    On Debian/Ubuntu based machines you can install it using
+3.  **[Jekyll][jekyll]**.
+    You can install this by running `gem install jekyll`.
 
-    ~~~
-    $ sudo apt-get install ruby2.0 ruby2.0-dev
-    ~~~
-
-2.  NodeJS
-
-    On Debian/Ubuntu based machines you can install it using
-
-    ~~~
-    $ sudo apt-get install nodejs
-    ~~~
-
-3.  Jekyll
-
-    Install `github-pages`:
-
-     ~~~
-     $ gem install github-pages
-     ~~~
-
-     or if that doesn't work:
-
-     ~~~
-     $ gem install jekyll
-     $ gem install kramdown
-     ~~~
-
-     We use Kramdown to translate Markdown into HTML, instead of
-     the default Redcarpet, because Kramdown handles Markdown
-     inside HTML blocks.
-
-    Note: you may need to specify the version of gem to use for installation
-    if you have multiple versions of Ruby installed.
-    For example for version 2.0 you could use:
-
-     ~~~
-     $ gem2.0 install github-pages
-     ~~~
-
-
-2.  The Python YAML module
-
-    If you are using the Anaconda Python distribution, you probably
-    already have it; if you don't, you can install it with:
-
-    ~~~
-    $ conda install pyyaml
-    ~~~
-
-    If you are using some other distribution, you can install the
-    Python YAML module using Pip:
-
-    ~~~
-    $ pip install pyyaml
-    ~~~
-
-    and if you are on Debian Linux, you can use:
-
-    ~~~
-    $ apt-get install python-yaml
-    ~~~
+If you want to run `bin/workshop_check.py` (which is invoked by `make workshop-check`)
+you will need Jekyll (so that you have its Markdown parser, which is called Kramdown)
+and the [PyYAML][pyyaml] module for Python 3.
 
 ## Setting Up a Separate Repository for Learners
 
@@ -230,7 +180,15 @@ and add whatever content you need to it.
 We are committed to offering a pleasant setup experience for our learners and organizers.
 If you find bugs in our instructions,
 or would like to suggest improvements,
-please [file an issue](https://github.com/swcarpentry/workshop-template/issues)
-or [mail us](mailto:admin@software-carpentry.org).
+please [file an issue][issues]
+or [mail us][contact].
 
-[import]: http://import.github.com/new?import_url=https://github.com/swcarpentry/workshop-template
+[contact]: mailto:admin@software-carpentry.org
+[importer]: http://import.github.com/new
+[issues]: https://github.com/swcarpentry/workshop-template/issues
+[jekyll]: https://jekyllrb.com/
+[jekyll-windows]: http://jekyll-windows.juthilo.com/
+[pyyaml]: https://pypi.python.org/pypi/PyYAML
+[ruby-install-guide]: https://www.ruby-lang.org/en/downloads/
+[ruby-installer]: http://rubyinstaller.org/
+[rubygems]: https://rubygems.org/pages/download/
