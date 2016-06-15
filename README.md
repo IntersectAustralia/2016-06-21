@@ -14,13 +14,13 @@ template for creating websites for workshops.
     please **send your repository's URL to the [Software Carpentry administrator](mailto:admin@software-carpentry.org)**.
     We build the [list of workshops on the main website](http://software-carpentry.org/workshops/index.html)
     from the data included in your `index.html` page.
-    We can only do that if you [customize](CUSTOMIZATION.md) that page correctly
+    We can only do that if you [customize][customization] that page correctly
     *and* send us a link to your workshop website.
 
 4.  Please also read
-    [the notes on customizing your website](CUSTOMIZATION.md) and the [FAQ](FAQ.md).
+    [the notes on customizing your website][customization] and the [FAQ][faq].
     If you're interested in knowing more about why we do things the way we do,
-    please check out the [design notes](DESIGN.md).
+    please check out the [design notes][design].
 
 5.  If you are teaching Git,
     please [create a separate repository](#setting-up-a-separate-repository-for-learners)
@@ -76,7 +76,7 @@ please [get in touch](#getting-and-giving-help).
     ![](fig/edit-index-file-menu-bar.png?raw=true)
     
     Editing hints are embedded in `index.html`,
-    and full instructions are in [CUSTOMIZATION.md](CUSTOMIZATION.md).
+    and full instructions are in [_extras/customization.md][customization].
 
     > Alternatively, you can clone the repository to your desktop,
     > edit `index.html` there,
@@ -105,10 +105,10 @@ please [get in touch](#getting-and-giving-help).
     if your repository is `https://github.com/your_username/YYYY-MM-DD-site`,
     its website will be `http://your_username.github.io/YYYY-MM-DD-site`.
 
-Full instructions are available in [CUSTOMIZATION.md](CUSTOMIZATION.md).
-This [FAQ](FAQ.md) includes a few extra tips
+Full instructions are available in [_extras/customization.md][customization].
+This [FAQ][faq] includes a few extra tips
 (additions are always welcome)
-and these notes on [the background and design](DESIGN.md) of this template may help as well.
+and these notes on [the background and design][design] of this template may help as well.
 
 That's it.
 The following steps are only necessary if you want to run the website locally on your computer.
@@ -184,6 +184,9 @@ please [file an issue][issues]
 or [mail us][contact].
 
 [contact]: mailto:admin@software-carpentry.org
+[customization]: https://swcarpentry.github.io/workshop-template/customization/
+[design]: https://swcarpentry.github.io/workshop-template/design/
+[faq]: https://swcarpentry.github.io/workshop-template/faq/
 [importer]: http://import.github.com/new
 [issues]: https://github.com/swcarpentry/workshop-template/issues
 [jekyll]: https://jekyllrb.com/

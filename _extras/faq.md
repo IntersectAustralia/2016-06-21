@@ -1,5 +1,8 @@
-# FAQ
-
+---
+layout: page
+title: FAQ
+permalink: /faq/
+---
 *   *Where can I get help?*
 
     Mail us at [admin@software-carpentry.org](mailto:admin@software-carpentry.org),

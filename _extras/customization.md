@@ -1,5 +1,8 @@
-# Customizing Your Workshop's Website
-
+---
+layout: page
+title: Customizing Your Workshop's Website
+permalink: /customization/
+---
 ## Configuration File
 
 You must edit the `_config.yml` configuration file in the root directory of your workshop
